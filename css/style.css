@@ -1,0 +1,472 @@
+/* Variables Start */
+:root{
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-background: #f6f6f6;
+}
+/* Variables End */
+/* --------------- */
+/* Global Rules */
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+/* navbar Start */
+.navbar{
+    padding:20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid var(--main-color);
+}
+.navbar .logo{
+    font-weight: 600;
+    font-size: 22px;
+}
+.navbar .logo span{
+    font-weight: 800;
+    color: var(--main-color);
+}
+.navbar .navbar-toggler{
+    border: none;
+}
+.navbar .links .icon:hover span:nth-child(2){
+    width: 100%;
+}
+.navbar .links .icon{
+    width: 30px ;
+    display: flex ;
+    flex-wrap: wrap ;
+}
+.navbar .links .icon span{
+    background-color: var(--main-color);
+    margin-bottom: 5px ;
+    height: 4px;
+}
+.navbar .links .icon span:first-child{
+    width: 100%;
+}
+.navbar .links .icon span:nth-child(2){
+    width: 60%;
+    transition: 0.3s;
+}
+.navbar .links .icon span:last-child{
+    width: 100%;
+}
+
+/*links*/
+.navbar-light .navbar-nav .nav-link{
+    color:var(--main-color) !important;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    font-size: 16px;
+    font-weight: 800;
+    color:var(--main-color);
+}
+/* navbar End */
+/* --------------- */
+/* Landing Section Start */
+.landing{
+    background-image: url(../img/mountain.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.landing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.landing .intro-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1{
+    margin: 0;
+    font-weight: bold;
+    font-weight: 50px;
+    color: var(--main-color);
+}
+.landing .intro-text p{
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--section-background);
+}
+/* Landing Section End */
+/* -------------------- */
+/* Features Start */
+.features{
+    padding: 60px 0;
+    background-color: var(--section-background);
+    text-align: center;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-gap: 20px;
+}
+.features .feat{
+    padding: 20px;
+}
+.features .feat i{
+    color: var(--main-color);
+}
+.features .feat h3{
+    font-weight: 800;
+    margin: 30px 0;
+    text-shadow: 10px 3px 10px rgb(150, 150, 150);
+}
+.features .feat p{
+    line-height: 1.7;
+    color: #777;
+    font-size: 16px;
+}
+/* Features End */
+/* ------------- */
+/* Services Start */
+.services{
+padding: 60px 0;
+}
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(302px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+.services .services-content .srv i{
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+.services .services-content .srv .text{
+    flex: 1;
+}
+.services .services-content .srv .text h3{
+    margin: 0 0 20px;
+}
+.services .services-content .srv .text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+.services .services-content .image::before{
+    content: "";
+    background-color: var(--secondary-color);
+    width: 85px;
+    height: calc(100% + 100px);
+    top:-50px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    box-shadow: 5px 5px 10px #444;
+}
+/* Services End */
+/* -------------- */
+/* Portfolio Start */
+.portfolio{
+    padding: 80px 0;
+    background-color: var(--section-background);
+}
+.portfolio .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(302px, 1fr));
+    grid-gap: 30px;
+    margin-top: 80px;
+}
+.portfolio .portfolio-content .card{
+    background-color: white;
+    box-shadow: 10px 10px 10px #333;
+    cursor: pointer;
+    border: 2px solid rgb(199, 199, 199);
+}
+.portfolio .portfolio-content .card img{
+    max-width: 100%;
+}
+.portfolio .portfolio-content .card .info{
+    padding: 10px;
+}
+.portfolio .portfolio-content .card .info h3{
+    font-size: 25px;
+    font-weight: 900;
+}
+.portfolio .portfolio-content .card .info p{
+    color: #777;
+    line-height: 1.6;
+}
+/* Portfolio End */
+/* ------------- */
+/* About Start */
+.about{
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.about .about-content{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about .about-content .image-about{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    box-shadow: 10px 10px 10px #333;
+}
+.about .about-content .image-about::before{
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+    
+}
+.about .about-content .image-about::after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -155px;
+    width: 200px;
+    height: 320px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    
+}
+.about .about-content .image-about img{
+max-width: 100%;
+}
+.about .about-content .text{
+    flex-basis: calc(100% - 500px);
+}
+.about .about-content .text p:first-of-type{
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+.about .about-content .text hr{
+    width: 50%;
+    height: 3px;
+    display: inline-block;
+    color: var(--main-color);
+}
+.about .about-content .text p:last-of-type{
+    line-height: 2;
+    color: #777;
+    margin-top: 20px;
+}
+/* About End */
+/* ------------- */
+/* Contact Start */
+.contact{
+    padding: 80px 0;
+    background-color: var(--section-background);
+}
+.contact .info{
+    padding: 40px 0;
+    background-color: var(--section-background);
+    text-align: center;
+}
+.contact .info .label{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.contact .info .link{
+    /* display: block; */
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.contact .info .link:hover{
+    font-weight: 900;
+    color: #51bbb2;
+}
+.contact .info .social{
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 20px;
+}
+.contact .info .social p{
+    font-size: 19px;
+    font-weight: 600;
+}
+.contact .info .social i{ cursor: pointer;}
+.contact .info .social i:first-of-type{
+    color: #f70000;
+}
+.contact .info .social i:nth-of-type(2){
+    color: #4867AA;
+    margin-left: 20px;
+}
+.contact .info .social i:nth-of-type(3){
+    color: #5DA9DD;
+    margin-left: 20px;
+}
+.contact .info .social i:last-of-type{
+    color: #f46f30;
+    margin-left: 20px;
+}
+/* Contact End */
+/* -------------- */
+/* Footer Start */
+.footer{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    font-size:23px;
+    transition: 0.3s;
+}
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* Footer End */
+
+
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* Components framework Start */
+.special-heading{
+    color: #dddddd;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -5px;
+    margin: 0;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.special-heading::after{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 25px auto;
+}
+.p-title{
+    color: #777;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.3s;
+    margin: 0;
+}
+/* Components framework End */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+ /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .portfolio{
+        padding: 50px 0;
+    }
+    .portfolio .portfolio-content{
+        margin-top: 45px;
+    }
+    .portfolio .portfolio-content .card{
+        margin: 0 33px;
+    }
+    .contact .info{
+        padding: 20px 0;
+    }
+    .footer{
+        font-size:14px;
+    }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {  
+    .special-heading{
+        font-size: 60px;
+    }
+    .p-title{
+        font-size: 12px;
+    }
+    .services .services-content .srv{
+       flex-direction: column;
+       text-align: center; 
+    
+    }
+    .about .special-heading{
+        font-size: 70px;
+    }
+    .contact .info .link,
+    .contact .info .label
+    {
+        font-size: 30px;
+    }
+}
+ /* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {  
+    .about .about-content{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 60px;
+    }
+    .about .about-content .image-about img{
+        border: 2px solid #777;
+    }
+    .about .about-content .image-about::before,
+    .about .about-content .image-about::after{
+        display: none;
+    }
+    .image-about{
+        margin: 0 auto 60px;
+    }
+    
+    
+}
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+    .image{
+        display: none;
+    }
+    .about .about-content .image-about {
+        width: 350px;
+        height: 522px;
+    }
+    .about .about-content .image-about::before{
+        width: 60px;
+    }
+    .about .about-content .image-about::after{
+        right: -125px;
+        width: 160px;
+        height: 345px;
+        border-left: 60px solid var(--main-color);
+        border-bottom: 60px solid var(--main-color);
+    }
+    .about .about-content .text {
+        font-size: 14px;
+    }
+    
+}
